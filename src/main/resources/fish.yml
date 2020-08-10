@@ -1,0 +1,51 @@
+Fish:
+  cod:
+    Name: "Cod"
+    Material: COD
+    Id: 1
+    Rarity: COMMON
+    Entity:
+      Type: COD
+    Biomes:
+      - OCEAN
+      - DEEP_OCEAN
+      - COLD_OCEAN
+      - DEEP_COLD_OCEAN
+      - BIRCH_FOREST
+      - BIRCH_FOREST_HILLS
+      - DARK_FOREST
+      - DARK_FOREST_HILLS
+      - FOREST
+      - GIANT_SPRUCE_TAIGA
+      - GIANT_SPRUCE_TAIGA_HILLS
+      - GIANT_TREE_TAIGA
+      - GIANT_TREE_TAIGA_HILLS
+      - PLAINS
+      - TAIGA
+      - TAIGA_HILLS
+      - TALL_BIRCH_FOREST
+      - TALL_BIRCH_HILLS
+  salmon:
+    Name: "Salmon"
+    Material: SALMON
+    Id: 2
+    Rarity: COMMON
+    Entity:
+      Type: SALMON
+    Biomes:
+      - RIVER
+      - BEACH
+      - BIRCH_FOREST
+      - BIRCH_FOREST_HILLS
+      - DARK_FOREST
+      - DARK_FOREST_HILLS
+      - FOREST
+      - GIANT_SPRUCE_TAIGA
+      - GIANT_SPRUCE_TAIGA_HILLS
+      - GIANT_TREE_TAIGA
+      - GIANT_TREE_TAIGA_HILLS
+      - PLAINS
+      - TAIGA
+      - TAIGA_HILLS
+      - TALL_BIRCH_FOREST
+      - TALL_BIRCH_HILLS

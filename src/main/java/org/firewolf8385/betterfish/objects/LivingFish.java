@@ -3,11 +3,14 @@ package org.firewolf8385.betterfish.objects;
 import org.bukkit.DyeColor;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.TropicalFish;
+import org.firewolf8385.betterfish.ConfigManager;
 
 /**
- * Represents a CustomFish that also have a mob form.
+ * Represents a CustomFish that also has a mob form.
  */
 public class LivingFish extends CustomFish {
+    private static final ConfigManager config = ConfigManager.getInstance();
+
     private EntityType type;
     private DyeColor bodyColor;
     private DyeColor patternColor;
@@ -19,6 +22,20 @@ public class LivingFish extends CustomFish {
      */
     public LivingFish(String id) {
         super(id);
+
+        String path = "Fish." + id + ".Entity";
+        type = EntityType.valueOf(config.getFish().getString(path + "Type"));
+
+        if(type == EntityType.TROPICAL_FISH) {
+            pattern = TropicalFish.Pattern.valueOf(config.getFish().getString(path + "Pattern"));
+            patternColor = DyeColor.valueOf(config.getFish().getString(path + "PatternColor"));
+            bodyColor = DyeColor.valueOf(config.getFish().getString(path + "BodyColor"));
+        }
+        else {
+            pattern = null;
+            patternColor = null;
+            bodyColor = null;
+        }
     }
 
     /**
