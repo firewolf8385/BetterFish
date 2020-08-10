@@ -15,6 +15,9 @@ public final class BetterFish extends JavaPlugin {
 
         registerCommands();
         registerFish();
+
+        // Registers metrics.
+        new MetricsLite(this, 8459);
     }
 
     @Override
