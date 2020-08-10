@@ -2,8 +2,10 @@ package org.firewolf8385.betterfish.objects;
 
 import org.bukkit.Material;
 import org.bukkit.block.Biome;
+import org.bukkit.inventory.ItemStack;
 import org.firewolf8385.betterfish.ConfigManager;
 import org.firewolf8385.betterfish.enums.Rarity;
+import org.firewolf8385.betterfish.utils.ItemBuilder;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -71,6 +73,19 @@ public class CustomFish {
      */
     public String getId() {
         return id;
+    }
+
+    /**
+     * Get the custom fish item.
+     * @return Custom fish item.
+     */
+    public ItemStack getItem() {
+        ItemBuilder builder = new ItemBuilder(material)
+                .setDisplayName(rarity.getColor() + name)
+                .addLore(rarity.toString())
+                .setCustomModelData(texture);
+
+        return builder.build();
     }
 
     /**
