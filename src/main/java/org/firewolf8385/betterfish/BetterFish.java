@@ -13,6 +13,7 @@ public final class BetterFish extends JavaPlugin {
         // Plugin startup logic
         config.setup(this);
 
+        registerCommands();
         registerFish();
     }
 
@@ -21,16 +22,20 @@ public final class BetterFish extends JavaPlugin {
         // Plugin shutdown logic
     }
 
+    private void registerCommands() {
+        getCommand("betterfish").setExecutor(new BetterFish());
+    }
+
     private void registerFish() {
         ConfigurationSection section = config.getFish().getConfigurationSection("Fish");
 
-        if(section == null) {
+        if (section == null) {
             return;
         }
 
         section.getKeys(false).forEach(fish -> {
             ConfigurationSection entity = config.getFish().getConfigurationSection("Fish." + fish + ".Entity");
-            if(entity != null) {
+            if (entity != null) {
                 new LivingFish(fish);
             }
             else {

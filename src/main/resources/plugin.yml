@@ -3,4 +3,10 @@ version: ${project.version}
 main: org.firewolf8385.betterfish.BetterFish
 api-version: 1.16
 authors: [firewolf8385]
-description: An overhaul to fishing in Minecraft
+description: An overhaul of fishing in Minecraft
+
+commands:
+  betterfish:
+    description: Main command for BetterFish.
+    usage: /<command>
+    aliases: [bf, fish]
