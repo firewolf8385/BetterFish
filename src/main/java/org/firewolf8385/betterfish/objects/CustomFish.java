@@ -41,6 +41,23 @@ public class CustomFish {
     }
 
     /**
+     * Get a CustomFish from it's id.
+     * @param id Id of the custom fish.
+     * @return The custom fish.
+     */
+    public static CustomFish fromId(String id) {
+        CustomFish cf = null;
+
+        for(CustomFish fish : getAllFish()) {
+            if(fish.getId().equals(id)) {
+                cf = fish;
+            }
+        }
+
+        return cf;
+    }
+
+    /**
      * Get a Collection of all CustomFish.
      * @return All CustomFish.
      */
