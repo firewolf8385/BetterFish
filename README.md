@@ -1,7 +1,11 @@
+![BetterFish Logo](https://i.imgur.com/2Gw1uCf.png)
 # BetterFish &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/firewolf8385/flameperms/blob/master/LICENSE)
 > A Complete Overhaul of Minecraft's Fishing Mechanics!
 
  BetterFish brings the joy back into fishing. Minecraft's vanilla mechanics are rather bland. There are only 4 fish varients and a handful of different treasures you can find. BetterFish allows you to add near limitless numbers of fish and fishing rods using resource packs to ensure your players will have a completely different view on fishing.
+ 
+## Useful Links
+  * bStats: (https://bstats.org/plugin/bukkit/BetterFish/8459)
 
 ## Installing
 ### Requirements
