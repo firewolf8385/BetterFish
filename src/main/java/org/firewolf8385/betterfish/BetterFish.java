@@ -7,19 +7,24 @@ import org.firewolf8385.betterfish.commands.BetterFishCMD;
 import org.firewolf8385.betterfish.listeners.EntityDeath;
 import org.firewolf8385.betterfish.listeners.PlayerFish;
 import org.firewolf8385.betterfish.objects.CustomFish;
+import org.firewolf8385.betterfish.objects.CustomRod;
 import org.firewolf8385.betterfish.objects.LivingFish;
 
 public final class BetterFish extends JavaPlugin {
     private static final ConfigManager config = ConfigManager.getInstance();
+    private static BetterFish plugin;
 
     @Override
     public void onEnable() {
         // Plugin startup logic
+        plugin = this;
+
         config.setup(this);
 
         registerCommands();
         registerListeners();
         registerFish();
+        registerRods();
 
         // Registers metrics.
         new MetricsLite(this, 8459);
@@ -28,6 +33,7 @@ public final class BetterFish extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        plugin = null;
     }
 
     private void registerCommands() {
@@ -57,5 +63,19 @@ public final class BetterFish extends JavaPlugin {
         });
 
         getLogger().info("Registered " + CustomFish.getAllFish().size() + " custom fish.");
+    }
+
+    private void registerRods() {
+        ConfigurationSection section = config.getRods().getConfigurationSection("Rods");
+
+        if (section == null) {
+            return;
+        }
+
+        section.getKeys(false).forEach(CustomRod::new);
+    }
+
+    public static BetterFish getPlugin() {
+        return plugin;
     }
 }

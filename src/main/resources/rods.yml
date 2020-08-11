@@ -33,3 +33,71 @@ Rods:
         - STICK
         - AIR
         - STRING
+  iron_fishing_rod:
+    Name: "Iron Fishing Rod"
+    Texture: 2
+    Power: 3
+    Recipe:
+      Row1:
+        - AIR
+        - AIR
+        - IRON_INGOT
+      Row2:
+        - AIR
+        - IRON_INGOT
+        - STRING
+      Row3:
+        - IRON_INGOT
+        - AIR
+        - STRING
+  gold_fishing_rod:
+    Name: "Gold Fishing Rod"
+    Texture: 3
+    Power: 4
+    Recipe:
+      Row1:
+        - AIR
+        - AIR
+        - GOLD_INGOT
+      Row2:
+        - AIR
+        - GOLD_INGOT
+        - STRING
+      Row3:
+        - GOLD_INGOT
+        - AIR
+        - STRING
+  diamond_fishing_rod:
+    Name: "Diamond Fishing Rod"
+    Texture: 4
+    Power: 5
+    Recipe:
+      Row1:
+        - AIR
+        - AIR
+        - DIAMOND
+      Row2:
+        - AIR
+        - DIAMOND
+        - STRING
+      Row3:
+        - DIAMOND
+        - AIR
+        - STRING
+  netherite_fishing_rod:
+    Name: "Netherite Fishing Rod"
+    Texture: 5
+    Power: 6
+    Recipe:
+      Row1:
+        - AIR
+        - AIR
+        - NETHERITE_INGOT
+      Row2:
+        - AIR
+        - NETHERITE_INGOT
+        - STRING
+      Row3:
+        - NETHERITE_INGOT
+        - AIR
+        - STRING
