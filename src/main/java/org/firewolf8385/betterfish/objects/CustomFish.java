@@ -30,10 +30,10 @@ public class CustomFish {
 
         String path = "Fish." + id;
 
-        name = config.getFish().getString(path + "Name");
-        texture = config.getFish().getInt(path + "Texture");
+        name = config.getFish().getString(path + ".Name");
+        texture = config.getFish().getInt(path + ".Texture");
         material = Material.valueOf(config.getFish().getString(path + ".Material"));
-        rarity = Rarity.valueOf(config.getFish().getString(path = ".Rarity"));
+        rarity = Rarity.valueOf(config.getFish().getString(path + ".Rarity"));
 
         config.getFish().getStringList(path + ".Biomes").forEach(biome -> {
             biomes.add(Biome.valueOf(biome));

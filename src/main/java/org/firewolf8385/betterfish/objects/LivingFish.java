@@ -24,12 +24,12 @@ public class LivingFish extends CustomFish {
         super(id);
 
         String path = "Fish." + id + ".Entity";
-        type = EntityType.valueOf(config.getFish().getString(path + "Type"));
+        type = EntityType.valueOf(config.getFish().getString(path + ".Type"));
 
         if(type == EntityType.TROPICAL_FISH) {
-            pattern = TropicalFish.Pattern.valueOf(config.getFish().getString(path + "Pattern"));
-            patternColor = DyeColor.valueOf(config.getFish().getString(path + "PatternColor"));
-            bodyColor = DyeColor.valueOf(config.getFish().getString(path + "BodyColor"));
+            pattern = TropicalFish.Pattern.valueOf(config.getFish().getString(path + ".Pattern"));
+            patternColor = DyeColor.valueOf(config.getFish().getString(path + ".PatternColor"));
+            bodyColor = DyeColor.valueOf(config.getFish().getString(path + ".BodyColor"));
         }
         else {
             pattern = null;
