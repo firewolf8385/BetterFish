@@ -68,6 +68,14 @@ public class CustomFish {
     }
 
     /**
+     * Get the biomes the fish can be found in.
+     * @return Biomes it can be found in.
+     */
+    public Collection<Biome> getBiomes() {
+        return biomes;
+    }
+
+    /**
      * Get the id of the fish.
      * @return Id of the fish.
      */
