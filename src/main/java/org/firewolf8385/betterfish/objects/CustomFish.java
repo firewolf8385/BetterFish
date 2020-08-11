@@ -113,6 +113,14 @@ public class CustomFish {
     }
 
     /**
+     * Get the rarity of the fish.
+     * @return Rarity of the fish.
+     */
+    public Rarity getRarity() {
+        return rarity;
+    }
+
+    /**
      * Get the texture of the fish.
      * @return Texture of the fish.
      */
