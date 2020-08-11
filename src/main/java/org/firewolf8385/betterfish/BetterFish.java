@@ -1,7 +1,10 @@
 package org.firewolf8385.betterfish;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.firewolf8385.betterfish.commands.BetterFishCMD;
+import org.firewolf8385.betterfish.listeners.EntityDeath;
 import org.firewolf8385.betterfish.objects.CustomFish;
 import org.firewolf8385.betterfish.objects.LivingFish;
 
@@ -14,6 +17,7 @@ public final class BetterFish extends JavaPlugin {
         config.setup(this);
 
         registerCommands();
+        registerListeners();
         registerFish();
 
         // Registers metrics.
@@ -26,7 +30,11 @@ public final class BetterFish extends JavaPlugin {
     }
 
     private void registerCommands() {
-        getCommand("betterfish").setExecutor(new BetterFish());
+        getCommand("betterfish").setExecutor(new BetterFishCMD());
+    }
+
+    private void registerListeners() {
+        Bukkit.getPluginManager().registerEvents(new EntityDeath(), this);
     }
 
     private void registerFish() {
