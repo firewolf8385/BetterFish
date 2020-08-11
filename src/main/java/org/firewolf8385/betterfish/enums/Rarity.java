@@ -33,7 +33,7 @@ public enum Rarity {
      * @return Chance of rarity being picked.
      */
     public int getChance() {
-        return config.getConfig().getInt(path + ".Chance");
+        return config.getConfig().getInt("Rarity." + path + ".Chance");
     }
 
     /**
@@ -41,7 +41,7 @@ public enum Rarity {
      * @return ChatColor of the rarity.
      */
     public ChatColor getColor() {
-        return ChatColor.valueOf(config.getConfig().getString(path + ".Color"));
+        return ChatColor.valueOf(config.getConfig().getString("Rarity." + path + ".Color"));
     }
 
     /**
@@ -49,14 +49,15 @@ public enum Rarity {
      * @return Experience.
      */
     public int getExperience() {
-        return  config.getConfig().getInt(path + ".Experience");
+        return  config.getConfig().getInt("Rarity." + path + ".Experience");
     }
+
 
     /**
      * Convert the Rarity to a string.
      * @return The rarity in String form.
      */
     public String toString() {
-        return config.getConfig().getString(path + ".DisplayText");
+        return config.getConfig().getString("Rarity." + path + ".DisplayText");
     }
 }
