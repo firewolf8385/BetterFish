@@ -5,6 +5,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.firewolf8385.betterfish.objects.CustomFish;
+import org.firewolf8385.betterfish.objects.CustomItem;
+import org.firewolf8385.betterfish.objects.CustomRod;
 import org.firewolf8385.betterfish.utils.ChatUtils;
 
 public class GetItemCMD implements CommandExecutor {
@@ -25,15 +27,15 @@ public class GetItemCMD implements CommandExecutor {
             return true;
         }
 
-        CustomFish fish = CustomFish.fromId(args[0]);
+        CustomItem item = CustomItem.getAllItems().get(args[0]);
 
-        if(fish == null) {
+        if(item == null) {
             ChatUtils.chat(sender, "&c&l(&7&l!&c&l) &cThat item does not exist.");
             return true;
         }
 
         Player p = (Player) sender;
-        p.getInventory().addItem(fish.getItem());
+        p.getInventory().addItem(item.getItem());
         ChatUtils.chat(p, "&a&l(&7&l!&a&l) &aItem has been given.");
 
         return true;

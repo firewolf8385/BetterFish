@@ -10,7 +10,7 @@ import org.firewolf8385.betterfish.utils.ItemBuilder;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class CustomFish {
+public class CustomFish extends CustomItem {
     private static final ConfigManager config = ConfigManager.getInstance();
     private static Collection<CustomFish> allFish = new ArrayList<>();
 
@@ -26,6 +26,7 @@ public class CustomFish {
      * @param id id of the fish.
      */
     public CustomFish(String id) {
+        super(id);
         this.id = id;
 
         String path = "Fish." + id;

@@ -1,0 +1,35 @@
+Rods:
+  bamboo_fishing_rod:
+    Name: "Bamboo Fishing Rod"
+    Texture: 1
+    Power: 1
+    Recipe:
+      Row1:
+        - AIR
+        - AIR
+        - BAMBOO
+      Row2:
+        - AIR
+        - BAMBOO
+        - STRING
+      Row3:
+        - BAMBOO
+        - AIR
+        - STRING
+  wooden_fishing_rod:
+    Name: "Wooden Fishing Rod"
+    Texture: 0
+    Power: 2
+    Recipe:
+      Row1:
+        - AIR
+        - AIR
+        - STICK
+      Row2:
+        - AIR
+        - STICK
+        - STRING
+      Row3:
+        - STICK
+        - AIR
+        - STRING
