@@ -113,3 +113,14 @@ Fish:
       - DEEP_LUKEWARM_OCEAN
       - WARM_OCEAN
       - DEEP_WARM_OCEAN
+  tuna:
+    Name: "Tuna"
+    Material: COD
+    Id: 10
+    Rarity: COMMON
+    Biomes:
+      - BEACH
+      - OCEAN
+      - DEEP_OCEAN
+      - LUKEWARM_OCEAN
+      - DEEP_LUKEWARM_OCEAN
