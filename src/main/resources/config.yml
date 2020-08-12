@@ -23,6 +23,7 @@ Rarity:
     Experience: 0
     Color: WHITE
   Uncommon:
+    DisplayText: "&a&lUNCOMMON"
     Chance: 30
     Experience: 0
     Color: GREEN
