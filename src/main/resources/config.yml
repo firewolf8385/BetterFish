@@ -35,7 +35,7 @@ Rarity:
     DisplayText: "&d&lEPIC"
     Chance: 7
     Experience: 0
-    Color: PURPLE
+    Color: LIGHT_PURPLE
   Legendary:
     DisplayText: "&e&lLEGENDARY"
     Chance: 1
