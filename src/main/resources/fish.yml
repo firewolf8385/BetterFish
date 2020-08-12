@@ -93,3 +93,11 @@ Fish:
     Biomes:
       - WARM_OCEAN
       - DEEP_WARM_OCEAN
+  angelfish:
+    Name: "Angelfish"
+    Material: TROPICAL_FISH
+    Id: 8
+    Rarity: RARE
+    Biomes:
+      - WARM_OCEAN
+      - DEEP_WARM_OCEAN
