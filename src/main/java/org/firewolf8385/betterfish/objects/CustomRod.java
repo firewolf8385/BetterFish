@@ -13,19 +13,25 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class CustomRod extends CustomItem{
+/**
+ * Represents a Fishing Rod not in vanilla Minecraft.
+ */
+public class CustomRod extends CustomItem {
     private static final ConfigManager config = ConfigManager.getInstance();
     private static Collection<CustomRod> allRods = new ArrayList<>();
 
     private final String name;
-    private final String id;
     private final int texture;
     private final int power;
     private final ShapedRecipe recipe;
 
+    /**
+     * Creates a Custom Fishing Rod
+     * @param id Item id.
+     */
     public CustomRod(String id) {
         super(id);
-        this.id = id;
+
         String path = "Rods." + id;
 
         name = config.getRods().getString(path + ".Name");
@@ -53,26 +59,18 @@ public class CustomRod extends CustomItem{
         allRods.add(this);
     }
 
+    /**
+     * Get a collection of all CustomRods.
+     * @return Collection of CustomRod.
+     */
     public static Collection<CustomRod> getAllRods() {
         return allRods;
     }
 
-    public static CustomRod fromId(String id) {
-        CustomRod cr = null;
-
-        for(CustomRod rod : getAllRods()) {
-            if(rod.getId().equals(id)) {
-                cr = rod;
-            }
-        }
-
-        return cr;
-    }
-
-    public String getId() {
-        return id;
-    }
-
+    /**
+     * Get the ItemStack of the fishing rod.
+     * @return ItemStack of the fishing rod.
+     */
     public ItemStack getItem() {
         ItemBuilder builder = new ItemBuilder(Material.FISHING_ROD)
                 .setCustomModelData(texture)

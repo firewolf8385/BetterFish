@@ -10,16 +10,18 @@ import org.firewolf8385.betterfish.utils.ItemBuilder;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Represents a fish item not in vanilla Minecraft.
+ */
 public class CustomFish extends CustomItem {
     private static final ConfigManager config = ConfigManager.getInstance();
     private static Collection<CustomFish> allFish = new ArrayList<>();
 
-    private String name;
-    private int texture;
-    private String id;
-    private Material material;
-    private Rarity rarity;
-    private Collection<Biome> biomes = new ArrayList<>();
+    private final String name;
+    private final int texture;
+    private final Material material;
+    private final Rarity rarity;
+    private final Collection<Biome> biomes = new ArrayList<>();
 
     /**
      * Create a CustomFish object.
@@ -27,7 +29,6 @@ public class CustomFish extends CustomItem {
      */
     public CustomFish(String id) {
         super(id);
-        this.id = id;
 
         String path = "Fish." + id;
 
@@ -60,6 +61,7 @@ public class CustomFish extends CustomItem {
         return cf;
     }
 
+
     /**
      * Get a Collection of all CustomFish.
      * @return All CustomFish.
@@ -74,14 +76,6 @@ public class CustomFish extends CustomItem {
      */
     public Collection<Biome> getBiomes() {
         return biomes;
-    }
-
-    /**
-     * Get the id of the fish.
-     * @return Id of the fish.
-     */
-    public String getId() {
-        return id;
     }
 
     /**

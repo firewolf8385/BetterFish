@@ -8,7 +8,7 @@ import java.util.HashMap;
  * Represents an item not in vanilla Minecraft.
  */
 public abstract class CustomItem {
-    private String id;
+    private final String id;
     private static HashMap<String, CustomItem> allItems= new HashMap<>();
 
     /**
@@ -28,5 +28,17 @@ public abstract class CustomItem {
         return allItems;
     }
 
+    /**
+     * Get the id of the custom item.
+     * @return Id of the custom item.
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * Get the ItemStack of the custom item.
+     * @return ItemStack of custom item.
+     */
     public abstract ItemStack getItem();
 }

@@ -11,10 +11,10 @@ import org.firewolf8385.betterfish.ConfigManager;
 public class LivingFish extends CustomFish {
     private static final ConfigManager config = ConfigManager.getInstance();
 
-    private EntityType type;
-    private DyeColor bodyColor;
-    private DyeColor patternColor;
-    private TropicalFish.Pattern pattern;
+    private final EntityType type;
+    private final DyeColor bodyColor;
+    private final DyeColor patternColor;
+    private final TropicalFish.Pattern pattern;
 
     /**
      * Creates a LivingFish.
