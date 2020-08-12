@@ -66,3 +66,14 @@ Fish:
     Biomes:
       - MUSHROOM_FIELD_SHORE
       - MUSHROOM_FIELDS
+  neon_tetra:
+    Name: "Neon Tetra"
+    Material: SALMON
+    Id: 5
+    Rarity: UNCOMMON
+    Biomes:
+      - JUNGLE
+      - JUNGLE_EDGE
+      - JUNGLE_HILLS
+      - MODIFIED_JUNGLE
+      - MODIFIED_JUNGLE_EDGE
