@@ -33,7 +33,7 @@ public class CustomFish extends CustomItem {
         String path = "Fish." + id;
 
         name = config.getFish().getString(path + ".Name");
-        texture = config.getFish().getInt(path + ".Texture");
+        texture = config.getFish().getInt(path + ".Id");
         material = Material.valueOf(config.getFish().getString(path + ".Material"));
         rarity = Rarity.valueOf(config.getFish().getString(path + ".Rarity"));
 
