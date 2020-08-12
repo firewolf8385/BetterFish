@@ -124,3 +124,16 @@ Fish:
       - DEEP_OCEAN
       - LUKEWARM_OCEAN
       - DEEP_LUKEWARM_OCEAN
+  herring:
+    Name: "Herring"
+    Material: COD
+    Id: 11
+    Rarity: COMMON
+    Biomes:
+      - BEACH
+      - COLD_OCEAN
+      - DEEP_COLD_OCEAN
+      - OCEAN
+      - DEEP_OCEAN
+      - LUKEWARM_OCEAN
+      - DEEP_LUKEWARM_OCEAN
