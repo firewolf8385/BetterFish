@@ -77,3 +77,11 @@ Fish:
       - JUNGLE_HILLS
       - MODIFIED_JUNGLE
       - MODIFIED_JUNGLE_EDGE
+  clownfish:
+    Name: "Clownfish"
+    Material: TROPICAL_FISH
+    Id: 6
+    Rarity: EPIC
+    Biomes:
+      - WARM_OCEAN
+      - DEEP_WARM_OCEAN
