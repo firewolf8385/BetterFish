@@ -101,3 +101,15 @@ Fish:
     Biomes:
       - WARM_OCEAN
       - DEEP_WARM_OCEAN
+  pufferfish:
+    Name: "Pufferfish"
+    Material: PUFFERFISH
+    Id: 9
+    Rarity: RARE
+    Entity:
+      Type: PUFFERFISH
+    Biomes:
+      - LUKEWARM_OCEAN
+      - DEEP_LUKEWARM_OCEAN
+      - WARM_OCEAN
+      - DEEP_WARM_OCEAN

@@ -31,6 +31,7 @@ public class EntityDeath implements Listener {
             switch (lf.getType()) {
                 case COD:
                 case SALMON:
+                case PUFFERFISH:
                     e.getDrops().clear();
                     e.getDrops().add(lf.getItem());
                     break;
