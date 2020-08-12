@@ -85,3 +85,11 @@ Fish:
     Biomes:
       - WARM_OCEAN
       - DEEP_WARM_OCEAN
+  tomato_clownfish:
+    Name: "Tomato Clownfish"
+    Material: TROPICAL_FISH
+    Id: 7
+    Rarity: LEGENDARY
+    Biomes:
+      - WARM_OCEAN
+      - DEEP_WARM_OCEAN
