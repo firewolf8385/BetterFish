@@ -49,3 +49,20 @@ Fish:
       - TAIGA_HILLS
       - TALL_BIRCH_FOREST
       - TALL_BIRCH_HILLS
+      -
+  red_shroomfish:
+    Name: "Red Shroomfish"
+    Material: SALMON
+    Id: 3
+    Rarity: RARE
+    Biomes:
+      - MUSHROOM_FIELD_SHORE
+      - MUSHROOM_FIELDS
+  brown_shroomfish:
+    Name: "Brown Shroomfish"
+    Material: SALMON
+    Id: 4
+    Rarity: EPIC
+    Biomes:
+      - MUSHROOM_FIELD_SHORE
+      - MUSHROOM_FIELDS
