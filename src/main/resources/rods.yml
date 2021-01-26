@@ -4,6 +4,7 @@ Rods:
     Texture: 1
     Power: 1
     Rarity: COMMON
+    Durability: 32
     Recipe:
       Row1:
         - AIR
@@ -22,6 +23,7 @@ Rods:
     Texture: 0
     Power: 2
     Rarity: COMMON
+    Durability: 64
     Recipe:
       Row1:
         - AIR
@@ -40,6 +42,7 @@ Rods:
     Texture: 2
     Power: 3
     Rarity: UNCOMMON
+    Durability: 128
     Recipe:
       Row1:
         - AIR
@@ -58,6 +61,7 @@ Rods:
     Texture: 3
     Power: 4
     Rarity: UNCOMMON
+    Durability: 96
     Recipe:
       Row1:
         - AIR
@@ -76,6 +80,7 @@ Rods:
     Texture: 4
     Power: 5
     Rarity: RARE
+    Durability: 256
     Recipe:
       Row1:
         - AIR
@@ -94,6 +99,7 @@ Rods:
     Texture: 5
     Power: 6
     Rarity: EPIC
+    Durability: 512
     Recipe:
       Row1:
         - AIR

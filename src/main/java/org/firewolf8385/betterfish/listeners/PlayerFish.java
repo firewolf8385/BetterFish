@@ -1,5 +1,6 @@
 package org.firewolf8385.betterfish.listeners;
 
+import com.github.firewolf8385.customitemapi.utils.ChatUtils;
 import org.bukkit.block.Biome;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
@@ -8,7 +9,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerFishEvent;
 import org.firewolf8385.betterfish.enums.Rarity;
 import org.firewolf8385.betterfish.objects.CustomFish;
-import org.firewolf8385.betterfish.utils.ChatUtils;
 
 import java.util.ArrayList;
 import java.util.List;

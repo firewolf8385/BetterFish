@@ -1,5 +1,6 @@
 package org.firewolf8385.betterfish.objects;
 
+import com.github.firewolf8385.customitemapi.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -8,7 +9,6 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.firewolf8385.betterfish.BetterFish;
 import org.firewolf8385.betterfish.ConfigManager;
 import org.firewolf8385.betterfish.enums.Rarity;
-import org.firewolf8385.betterfish.utils.ItemBuilder;
 import com.github.firewolf8385.customitemapi.objects.CustomItem;
 
 import java.util.ArrayList;
@@ -27,6 +27,7 @@ public class CustomRod extends CustomItem {
     private final int power;
     private final Rarity rarity;
     private final ShapedRecipe recipe;
+    private final int durability;
 
     /**
      * Creates a Custom Fishing Rod
@@ -41,6 +42,7 @@ public class CustomRod extends CustomItem {
         texture = config.getRods().getInt(path + ".Texture");
         power = config.getRods().getInt(path + ".Power");
         rarity = Rarity.valueOf(config.getRods().getString(path + ".Rarity"));
+        durability = config.getRods().getInt(path + ".Durability");
 
         List<String> row1 = config.getRods().getStringList(path + ".Recipe.Row1");
         List<String> row2 = config.getRods().getStringList(path + ".Recipe.Row2");
@@ -79,10 +81,10 @@ public class CustomRod extends CustomItem {
         ItemBuilder builder = new ItemBuilder(Material.FISHING_ROD)
                 .setCustomModelData(texture)
                 .setDisplayName(rarity.getColor() + name)
+                .setCustomDurability(durability)
                 .addLore("&8Fishing Power: " + power)
                 .addLore("")
                 .addLore(rarity.toString());
-
         return builder.build();
     }
 

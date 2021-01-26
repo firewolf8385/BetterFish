@@ -1,12 +1,12 @@
 package org.firewolf8385.betterfish.objects;
 
 
+import com.github.firewolf8385.customitemapi.utils.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.block.Biome;
 import org.bukkit.inventory.ItemStack;
 import org.firewolf8385.betterfish.ConfigManager;
 import org.firewolf8385.betterfish.enums.Rarity;
-import org.firewolf8385.betterfish.utils.ItemBuilder;
 import com.github.firewolf8385.customitemapi.objects.CustomItem;
 
 import java.util.ArrayList;
