@@ -109,6 +109,10 @@ public class CustomFish extends CustomItem {
         return name;
     }
 
+    /**
+     *
+     * @return
+     */
     public Rarity getRarity() {
         return rarity;
     }

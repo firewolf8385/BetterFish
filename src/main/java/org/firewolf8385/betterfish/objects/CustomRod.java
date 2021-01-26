@@ -88,10 +88,18 @@ public class CustomRod extends CustomItem {
         return builder.build();
     }
 
+    /**
+     * Get the power of the fishing rod.
+     * @return Power of the fishing rod.
+     */
     public int getPower() {
         return power;
     }
 
+    /**
+     * Get the rarity of the fishing rod.
+     * @return Rarity of the fishing rod.
+     */
     public Rarity getRarity() {
         return rarity;
     }
