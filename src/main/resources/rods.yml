@@ -3,6 +3,7 @@ Rods:
     Name: "Bamboo Fishing Rod"
     Texture: 1
     Power: 1
+    Rarity: COMMON
     Recipe:
       Row1:
         - AIR
@@ -20,6 +21,7 @@ Rods:
     Name: "Wooden Fishing Rod"
     Texture: 0
     Power: 2
+    Rarity: COMMON
     Recipe:
       Row1:
         - AIR
@@ -37,6 +39,7 @@ Rods:
     Name: "Iron Fishing Rod"
     Texture: 2
     Power: 3
+    Rarity: UNCOMMON
     Recipe:
       Row1:
         - AIR
@@ -54,6 +57,7 @@ Rods:
     Name: "Gold Fishing Rod"
     Texture: 3
     Power: 4
+    Rarity: UNCOMMON
     Recipe:
       Row1:
         - AIR
@@ -71,6 +75,7 @@ Rods:
     Name: "Diamond Fishing Rod"
     Texture: 4
     Power: 5
+    Rarity: RARE
     Recipe:
       Row1:
         - AIR
@@ -88,6 +93,7 @@ Rods:
     Name: "Netherite Fishing Rod"
     Texture: 5
     Power: 6
+    Rarity: EPIC
     Recipe:
       Row1:
         - AIR

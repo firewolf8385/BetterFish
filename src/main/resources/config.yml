@@ -10,35 +10,28 @@ Rarity:
   Junk:
     DisplayText: "&7&lJUNK"
     Chance: 0
-    Experience: 0
     Color: GRAY
   Treasure:
     DisplayText: "&8&lTREASURE"
     Chance: 0
-    Experience: 0
     Color: GOLD
   Common:
     DisplayText: "&f&lCOMMON"
     Chance: 45
-    Experience: 0
     Color: WHITE
   Uncommon:
     DisplayText: "&a&lUNCOMMON"
     Chance: 30
-    Experience: 0
     Color: GREEN
   Rare:
     DisplayText: "&b&lRARE"
     Chance: 17
-    Experience: 0
     Color: AQUA
   Epic:
     DisplayText: "&d&lEPIC"
     Chance: 7
-    Experience: 0
     Color: LIGHT_PURPLE
   Legendary:
     DisplayText: "&e&lLEGENDARY"
     Chance: 1
-    Experience: 0
     Color: YELLOW

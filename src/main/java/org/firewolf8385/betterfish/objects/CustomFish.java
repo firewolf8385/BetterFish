@@ -1,10 +1,11 @@
 package org.firewolf8385.betterfish.objects;
 
-import com.github.firewolf8385.customitemapi.enums.ItemRarity;
+
 import org.bukkit.Material;
 import org.bukkit.block.Biome;
 import org.bukkit.inventory.ItemStack;
 import org.firewolf8385.betterfish.ConfigManager;
+import org.firewolf8385.betterfish.enums.Rarity;
 import org.firewolf8385.betterfish.utils.ItemBuilder;
 import com.github.firewolf8385.customitemapi.objects.CustomItem;
 
@@ -21,7 +22,7 @@ public class CustomFish extends CustomItem {
     private final String name;
     private final int texture;
     private final Material material;
-    private final ItemRarity rarity;
+    private final Rarity rarity;
     private final Collection<Biome> biomes = new ArrayList<>();
 
     /**
@@ -36,7 +37,7 @@ public class CustomFish extends CustomItem {
         name = config.getFish().getString(path + ".Name");
         texture = config.getFish().getInt(path + ".Id");
         material = Material.valueOf(config.getFish().getString(path + ".Material"));
-        rarity = ItemRarity.valueOf(config.getFish().getString(path + ".Rarity"));
+        rarity = Rarity.valueOf(config.getFish().getString(path + ".Rarity"));
 
         config.getFish().getStringList(path + ".Biomes").forEach(biome -> {
             biomes.add(Biome.valueOf(biome));
@@ -86,7 +87,7 @@ public class CustomFish extends CustomItem {
     public ItemStack getItemStack() {
         ItemBuilder builder = new ItemBuilder(material)
                 .setDisplayName(rarity.getColor() + name)
-                .addLore(rarity.getLore())
+                .addLore(rarity.toString())
                 .setCustomModelData(texture);
 
         return builder.build();
@@ -108,11 +109,7 @@ public class CustomFish extends CustomItem {
         return name;
     }
 
-    /**
-     * Get the rarity of the fish.
-     * @return Rarity of the fish.
-     */
-    public ItemRarity getRarity() {
+    public Rarity getRarity() {
         return rarity;
     }
 
