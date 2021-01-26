@@ -1,11 +1,12 @@
 package org.firewolf8385.betterfish.objects;
 
+import com.github.firewolf8385.customitemapi.enums.ItemRarity;
 import org.bukkit.Material;
 import org.bukkit.block.Biome;
 import org.bukkit.inventory.ItemStack;
 import org.firewolf8385.betterfish.ConfigManager;
-import org.firewolf8385.betterfish.enums.Rarity;
 import org.firewolf8385.betterfish.utils.ItemBuilder;
+import com.github.firewolf8385.customitemapi.objects.CustomItem;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,7 +21,7 @@ public class CustomFish extends CustomItem {
     private final String name;
     private final int texture;
     private final Material material;
-    private final Rarity rarity;
+    private final ItemRarity rarity;
     private final Collection<Biome> biomes = new ArrayList<>();
 
     /**
@@ -35,7 +36,7 @@ public class CustomFish extends CustomItem {
         name = config.getFish().getString(path + ".Name");
         texture = config.getFish().getInt(path + ".Id");
         material = Material.valueOf(config.getFish().getString(path + ".Material"));
-        rarity = Rarity.valueOf(config.getFish().getString(path + ".Rarity"));
+        rarity = ItemRarity.valueOf(config.getFish().getString(path + ".Rarity"));
 
         config.getFish().getStringList(path + ".Biomes").forEach(biome -> {
             biomes.add(Biome.valueOf(biome));
@@ -82,10 +83,10 @@ public class CustomFish extends CustomItem {
      * Get the custom fish item.
      * @return Custom fish item.
      */
-    public ItemStack getItem() {
+    public ItemStack getItemStack() {
         ItemBuilder builder = new ItemBuilder(material)
                 .setDisplayName(rarity.getColor() + name)
-                .addLore(rarity.toString())
+                .addLore(rarity.getLore())
                 .setCustomModelData(texture);
 
         return builder.build();
@@ -111,7 +112,7 @@ public class CustomFish extends CustomItem {
      * Get the rarity of the fish.
      * @return Rarity of the fish.
      */
-    public Rarity getRarity() {
+    public ItemRarity getRarity() {
         return rarity;
     }
 

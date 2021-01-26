@@ -4,6 +4,8 @@ main: org.firewolf8385.betterfish.BetterFish
 api-version: 1.16
 authors: [firewolf8385]
 description: An overhaul of fishing in Minecraft
+depend:
+  - CustomItemAPI
 
 commands:
   betterfish:

@@ -33,7 +33,7 @@ public class EntityDeath implements Listener {
                 case SALMON:
                 case PUFFERFISH:
                     e.getDrops().clear();
-                    e.getDrops().add(lf.getItem());
+                    e.getDrops().add(lf.getItemStack());
                     break;
 
                 case TROPICAL_FISH:
@@ -42,7 +42,7 @@ public class EntityDeath implements Listener {
                     if(tf.getPattern() == lf.getPattern()) {
                         if(tf.getPatternColor() == lf.getPatternColor() && tf.getBodyColor() == lf.getBodyColor()) {
                             e.getDrops().clear();
-                            e.getDrops().add(lf.getItem());
+                            e.getDrops().add(lf.getItemStack());
                         }
                     }
                     break;

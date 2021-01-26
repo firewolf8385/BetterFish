@@ -1,5 +1,6 @@
 package org.firewolf8385.betterfish.listeners;
 
+import com.github.firewolf8385.customitemapi.enums.ItemRarity;
 import org.bukkit.block.Biome;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
@@ -41,7 +42,7 @@ public class PlayerFish implements Listener {
             rarity = getRarity();
 
             for(CustomFish cf : biomeFish) {
-                if(cf.getRarity() == rarity) {
+                if(rarity == Rarity.valueOf(cf.getRarity().toString())) {
                     allowedFish.add(cf);
                 }
             }
@@ -51,9 +52,9 @@ public class PlayerFish implements Listener {
         CustomFish cf = allowedFish.get(random);
 
         Item stack = (Item) e.getCaught();
-        stack.setItemStack(cf.getItem());
+        stack.setItemStack(cf.getItemStack());
 
-        e.setExpToDrop(cf.getRarity().getExperience());
+        //e.setExpToDrop(cf.getRarity().getExperience());
         ChatUtils.chat(p, rarity.toString());
     }
 

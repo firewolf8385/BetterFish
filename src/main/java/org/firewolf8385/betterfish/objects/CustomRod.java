@@ -8,6 +8,7 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.firewolf8385.betterfish.BetterFish;
 import org.firewolf8385.betterfish.ConfigManager;
 import org.firewolf8385.betterfish.utils.ItemBuilder;
+import com.github.firewolf8385.customitemapi.objects.CustomItem;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -43,7 +44,7 @@ public class CustomRod extends CustomItem {
         List<String> row3 = config.getRods().getStringList(path + ".Recipe.Row3");
 
         NamespacedKey key = new NamespacedKey(BetterFish.getPlugin(), id);
-        recipe = new ShapedRecipe(key, getItem());
+        recipe = new ShapedRecipe(key, getItemStack());
         recipe.shape("ABC", "DEF", "GHI");
         recipe.setIngredient('A', Material.valueOf(row1.get(0)));
         recipe.setIngredient('B', Material.valueOf(row1.get(1)));
@@ -71,7 +72,7 @@ public class CustomRod extends CustomItem {
      * Get the ItemStack of the fishing rod.
      * @return ItemStack of the fishing rod.
      */
-    public ItemStack getItem() {
+    public ItemStack getItemStack() {
         ItemBuilder builder = new ItemBuilder(Material.FISHING_ROD)
                 .setCustomModelData(texture)
                 .setDisplayName("&f" + name)
