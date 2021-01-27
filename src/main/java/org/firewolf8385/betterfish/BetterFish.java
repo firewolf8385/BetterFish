@@ -4,8 +4,10 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.firewolf8385.betterfish.commands.BetterFishCMD;
+import org.firewolf8385.betterfish.listeners.EnchantItemListener;
 import org.firewolf8385.betterfish.listeners.EntityDeath;
 import org.firewolf8385.betterfish.listeners.PlayerFish;
+import org.firewolf8385.betterfish.listeners.PrepareAnvilListener;
 import org.firewolf8385.betterfish.objects.CustomFish;
 import org.firewolf8385.betterfish.objects.CustomRod;
 import org.firewolf8385.betterfish.objects.LivingFish;
@@ -43,6 +45,8 @@ public final class BetterFish extends JavaPlugin {
     private void registerListeners() {
         Bukkit.getPluginManager().registerEvents(new EntityDeath(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerFish(), this);
+        Bukkit.getPluginManager().registerEvents(new EnchantItemListener(), this);
+        Bukkit.getPluginManager().registerEvents(new PrepareAnvilListener(), this);
     }
 
     private void registerFish() {

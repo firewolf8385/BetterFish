@@ -1,5 +1,6 @@
 package org.firewolf8385.betterfish.objects;
 
+import com.github.firewolf8385.customitemapi.utils.ChatUtils;
 import com.github.firewolf8385.customitemapi.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -82,9 +83,8 @@ public class CustomRod extends CustomItem {
                 .setCustomModelData(texture)
                 .setDisplayName(rarity.getColor() + name)
                 .setCustomDurability(durability)
-                .addLore("&8Fishing Power: " + power)
-                .addLore("")
-                .addLore(rarity.toString());
+                .addLore(getDefaultLore())
+                .setPersistentData("id", getId());
         return builder.build();
     }
 
@@ -102,5 +102,14 @@ public class CustomRod extends CustomItem {
      */
     public Rarity getRarity() {
         return rarity;
+    }
+
+    public List<String> getDefaultLore() {
+        List<String> lore = new ArrayList<>();
+        lore.add(ChatUtils.translate("&8Fishing Power: " + power));
+        lore.add(" ");
+        lore.add(ChatUtils.translate(rarity.toString()));
+
+        return lore;
     }
 }
